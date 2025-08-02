@@ -1,14 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
+    <section>
+      <h1>Todo Planner</h1>
 
+      <form>
+        <input type="text" id="todo-input" placeholder="What's the plan for today?">
+        <button type="submit">Add task</button>
+      </form>
+      <div>
+        <h2>My todo list:</h2>
+        <ul class="js-list"></ul>
+      </div>
+    </section>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
