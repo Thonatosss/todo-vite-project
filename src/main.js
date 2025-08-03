@@ -1,4 +1,4 @@
-import { addTask, deleteTask, getTasks } from "./modules/storage";
+import { addTask, deleteTask, getTasks, isDone } from "./modules/storage";
 import { tasksCounter } from "./modules/counter";
 const form = document.querySelector("form");
 const container = document.querySelector(".js-container");
@@ -12,7 +12,7 @@ function handleInput(event) {
   addTask(input.value);
   form.reset();
 }
-function handleDelete(event) {
+function handleButtons (event) {
   
   if(event.target.classList.contains('js-delete')){
     const {id} = event.target.closest(".js-item").dataset;
@@ -20,8 +20,14 @@ function handleDelete(event) {
     deleteTask(id);
     
   }
+  else if(event.target.classList.contains("js-done")){
+    const {id} = event.target.closest(".js-item").dataset;
+    const isChecked = event.target.checked;
+    isDone(id, isChecked);
+    
+  }
 }
 
 document.addEventListener("DOMContentLoaded", getTasks);
 form.addEventListener("submit", handleInput);
-container.addEventListener("click", handleDelete);
+container.addEventListener("click", handleButtons);

@@ -22,6 +22,7 @@ function addTask(todo) {
   const newTask = {
     id: nanoid(),
     text: todo,
+    isDone: false,
   };
   todoList.push(newTask);
   try {
@@ -43,5 +44,15 @@ function deleteTask(taskId) {
   }
   tasksCounter();
 }
+function isDone(taskId, status) {
+  console.log(`Checkbox with id ${taskId}, status ${status}`);
+  const indexOfTask = todoList.findIndex(({ id }) => id === taskId);
+  todoList[indexOfTask].isDone = status;
 
-export { getTasks, addTask, deleteTask };
+  try {
+    localStorage.setItem("todo-list", JSON.stringify(todoList));
+  } catch (error) {
+    console.log("Error:", error.message);
+  }
+}
+export { getTasks, addTask, deleteTask, isDone };
