@@ -1,11 +1,10 @@
-import { customAlphabet } from "nanoid";
-const nanoid = customAlphabet("1234567890abcdef", 10);
+
 
 const todoListElement = document.querySelector(".js-list");
 
 function createMarkup(arr) {
   const markup = arr
-    .map(({ id, text }) => `<li data-id=${id}><div><p>${text}</p></div></li>`)
+    .map(({ id, text }) => `<li data-id=${id} class="js-item"><p>${text}</p><button class ="js-delete">Delete task</button></li>`)
     .join("");
 
   todoListElement.insertAdjacentHTML("beforeend", markup);

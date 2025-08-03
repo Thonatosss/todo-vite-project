@@ -1,4 +1,8 @@
+import { customAlphabet } from "nanoid";
 import { createMarkup } from "./markup";
+
+const nanoid = customAlphabet("1234567890abcdef", 10);
+const todoListElement = document.querySelector(".js-list");
 let todoList = [];
 
 function getTasks() {
@@ -24,9 +28,19 @@ function addTask(todo) {
   } catch (error) {
     console.log("Add task error:", error.message);
   }
-  createMarkup(todoList);
   todoListElement.innerHTML = "";
+  createMarkup(todoList);
 }
-function deleteTast(event) {}
+function deleteTask(taskId) {
+  const indexOfTask = todoList.findIndex(({ id }) => id === taskId);
+  todoList.splice(indexOfTask, 1);
+  try {
+    localStorage.setItem("todo-list", JSON.stringify(todoList));
+  } catch (error) {
+    console.log("Add task error:", error.message);
+  }
 
-export { getTasks, addTask, deleteTast };
+  return indexOfTask;
+}
+
+export { getTasks, addTask, deleteTask };
