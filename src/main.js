@@ -1,5 +1,5 @@
 import { addTask, deleteTask, getTasks } from "./modules/storage";
-
+import { tasksCounter } from "./modules/counter";
 const form = document.querySelector("form");
 const container = document.querySelector(".js-container");
 console.log(container);
