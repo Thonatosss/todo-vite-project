@@ -55,4 +55,15 @@ function isDone(taskId, status) {
     console.log("Error:", error.message);
   }
 }
-export { getTasks, addTask, deleteTask, isDone };
+function editTask (taskId, text){
+  const indexOfTask = todoList.findIndex(({id})=> id === taskId);
+  todoList[indexOfTask].text = text;
+
+  try {
+    localStorage.setItem("todo-list", JSON.stringify(todoList));
+  } catch (error) {
+    console.log("Error:", error.message);
+  }
+
+}
+export { getTasks, addTask, deleteTask, isDone, editTask };
