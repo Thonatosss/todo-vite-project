@@ -16,9 +16,6 @@ function handleButtons(event) {
   const { id } = target.closest(".js-item").dataset;
   const listItem = target.closest(".js-item");
   
-  const editBtn = listItem.querySelector(".js-edit");
-  const cancelBtn = listItem.querySelector(".js-cancel");
-  const saveBtn = listItem.querySelector(".js-save");
  
 
   if (target.classList.contains("js-delete")) {
