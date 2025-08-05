@@ -1,3 +1,10 @@
+@import "tailwindcss";
+@theme {
+  --color-item-background: 	oklch(30% 0.01 270);
+  --color-accent-purple: oklch(70% 0.25 292);
+  --color-hover-purple: oklch(60% 0.22 292);
+  
+}
 .is-hidden{
     display: none;
 }

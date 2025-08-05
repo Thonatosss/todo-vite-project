@@ -5,19 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <section>
-      <h1>Todo Planner</h1>
-
-      <form>
-        <input type="text" id="todo-input" placeholder="What's the plan for today?">
-        <button type="submit">Add task</button>
+  <body class="px-10 py-2.5 font-[Inter] bg-gray-950">
+    <section class="flex flex-col items-center-safe">
+      <h1 class="text-center text-5xl font-semibold text-white">Todo Planner</h1>
+      <form class="flex flex-col items-center gap-5 mt-10 w-80 bg-item-background rounded-2xl p-2">
+        <input class="bg-gray-500 p-2 rounded-xl text-white text-lg w-70" type="text" id="todo-input" placeholder="What's the plan for today?">
+        <button type="submit" class="p-2.5 bg-accent-purple w-30 rounded-xl text-white">Add task</button>
       </form>
-      <div class="js-container">
-        <h2>My todo list <span class="js-counter">()</span>:</h2>
-        <ul class="js-list"></ul>
+      <div class="js-container mt-15">
+        <h2 class="text-center mb-10 text-4xl font-semibold text-white">My todo list <span class="js-counter">()</span></h2>
+        <ul class="js-list flex flex-wrap gap-5 flex-row justify-center items-center"></ul>
       </div>
     </section>
     <script type="module" src="./src/main.js"></script>

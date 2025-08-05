@@ -13,7 +13,7 @@ function enterEditMode(listItem) {
   const input = document.createElement("input");
   input.type = "text";
   input.value = textValue;
-  input.classList.add("js-edit-input");
+  input.className = "js-edit-input p-2.5 rounded-lg mb-8 outline-accent-purple";
   text.replaceWith(input);
   input.focus();
 
@@ -31,7 +31,7 @@ function saveChanges(listItem, id) {
   const newText = editInput.value.trim();
 
   const newParagraph = document.createElement("p");
-  newParagraph.className = "js-text";
+  newParagraph.className = "js-text text-lg text-center";
   newParagraph.textContent = newText;
   editInput.replaceWith(newParagraph);
 
@@ -42,7 +42,7 @@ function cancelEdit(listItem) {
   listItem.dataset.editing = false;
   toggleButtons(listItem, false);
   const p = document.createElement("p");
-  p.className = "js-text";
+  p.className = "js-text text-lg text-center";
   p.textContent = textValue;
   editInput.replaceWith(p);
 }
