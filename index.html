@@ -10,13 +10,13 @@
   </head>
   <body class="px-10 py-2.5 font-[Inter] bg-gray-950">
     <section class="flex flex-col items-center-safe">
-      <h1 class="text-center text-5xl font-semibold text-white">Todo Planner</h1>
-      <form class="flex flex-col items-center gap-5 mt-10 w-80 bg-item-background rounded-2xl p-2">
-        <input class="bg-gray-500 p-2 rounded-xl text-white text-lg w-70" type="text" id="todo-input" placeholder="What's the plan for today?">
-        <button type="submit" class="p-2.5 bg-accent-purple w-30 rounded-xl text-white">Add task</button>
+      <h1 class="text-center text-4xl font-semibold text-white tracking-wider">Todo Planner</h1>
+      <form class="flex flex-col items-center gap-5 mt-10 w-65 bg-item-background rounded-2xl p-2">
+        <input class="bg-gray-500 p-2 rounded-lg text-white text-sm outline-accent-purple w-full focus:ring-2" type="text" id="todo-input" placeholder="Add a task">
+        <button type="submit" class="p-2.5 bg-accent-purple w-30 rounded-xl text-white text-sm">Add task</button>
       </form>
       <div class="js-container mt-15">
-        <h2 class="text-center mb-10 text-4xl font-semibold text-white">My todo list <span class="js-counter">()</span></h2>
+        <h2 class="text-center mb-10 text-3xl font-semibold text-white tracking-tight">My todo list <span class="js-counter">()</span></h2>
         <ul class="js-list flex flex-wrap gap-5 flex-row justify-center items-center"></ul>
       </div>
     </section>

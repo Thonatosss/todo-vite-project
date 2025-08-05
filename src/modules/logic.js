@@ -13,7 +13,7 @@ function enterEditMode(listItem) {
   const input = document.createElement("input");
   input.type = "text";
   input.value = textValue;
-  input.className = "js-edit-input p-2.5 rounded-lg mb-8 outline-accent-purple";
+  input.className = "js-edit-input p-2.5 rounded-lg outline-accent-purple bg-gray-500";
   text.replaceWith(input);
   input.focus();
 
@@ -48,6 +48,7 @@ function cancelEdit(listItem) {
 }
 function toggleButtons(listItem, isEditing) {
   listItem.querySelector(".js-edit").classList.toggle("is-hidden", isEditing);
+  listItem.querySelector(".js-delete").classList.toggle("is-hidden", isEditing);
   listItem.querySelector(".js-save").classList.toggle("is-hidden", !isEditing);
   listItem
     .querySelector(".js-cancel")
