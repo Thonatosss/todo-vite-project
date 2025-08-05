@@ -1,5 +1,4 @@
-import { addTask, deleteTask, getTasks, isDone, editTask } from "./storage";
-
+import { deleteTask, getTasks, editTask } from "./storage";
 let textValue = "";
 function handleDelete(listItem, id) {
   listItem.remove();

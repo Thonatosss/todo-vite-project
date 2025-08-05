@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <link rel="stylesheet" href="./src/output.css" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="p-10 font-[Inter] min-h-screen w-screen animated-background bg-gradient-to-r from-gray-950 via-indigo-950 to-purple-950">
+  <body style="background-image: url('./src/pictures/stars-upscale.png'); background-repeat:no-repeat; background-size:cover;" class="p-10 font-[Inter] min-h-screen" >
     <section class="flex flex-col items-center-safe mt-5">
       <h1 class=" text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500 bg-clip-text text-transparent tracking-tight text-center text-shadow-lg text-shadow-black/10">Todo Planner</h1>
-      <form class="flex flex-col items-center gap-5 mt-25 mb-25 w-65 bg-item-background rounded-2xl p-2 shadow-2xl shadow-black/40">
-        <input class="bg-gray-500 p-2 rounded-lg text-white text-sm outline-accent-purple w-full focus:ring-2" type="text" id="todo-input" placeholder="Add a task">
-        <button type="submit" class="p-2.5 bg-accent-purple w-30 rounded-xl text-white text-sm shadow-md shadow-hover-purple/30 ">Add task</button>
+      <form class="flex items-center gap-5 mt-25 mb-25 w-full bg-item-background rounded-2xl p-2 shadow-2xl shadow-pink-500/30 ">
+        <input class="bg-gray-500 p-2 rounded-lg text-white text-sm outline-accent-purple w-full transition ease-in duration-200 focus:scale-101" type="text" id="todo-input" placeholder="Add a task">
+        <button type="submit" class="p-2.5 bg-accent-purple w-30 rounded-xl text-white text-xs shadow-md shadow-hover-purple/30 hover:bg-hover-purple cursor-pointer transition ease-in duration-200 hover:scale-105 hover:font-semibold">Add task</button>
       </form>
       <div class="js-container mt-15">
         <h2 class="text-center mb-10 text-3xl font-semibold text-white tracking-tight">My todo list <span class="js-counter">()</span></h2>
