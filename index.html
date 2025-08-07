@@ -13,8 +13,8 @@
     <section class="flex flex-col items-center-safe mt-5">
       <h1 class=" text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500 bg-clip-text text-transparent tracking-tight text-center text-shadow-lg text-shadow-black/10 md:text-6xl lg:text-7xl">Todo Planner</h1>
       <form class="flex items-center gap-5 mt-25 mb-25 w-full bg-item-background rounded-2xl p-2 shadow-2xl shadow-pink-500/30 md:w-3/4 md:gap-4 md:p-3 lg:mt-30 lg:mb-30">
-        <input class="bg-gray-500 p-2 rounded-lg text-white text-sm outline-accent-purple w-full transition ease-in duration-200 focus:scale-101 md:text-sm" type="text" id="todo-input" placeholder="Add a task">
-        <button type="submit" class="p-2.5 bg-accent-purple w-30 rounded-xl text-white text-xs shadow-md shadow-hover-purple/30 hover:bg-hover-purple cursor-pointer transition ease-in duration-200 hover:scale-105 hover:font-semibold md:text-sm hover:">Add task</button>
+        <input class="bg-item-background border-1 border-gray-500 p-2 rounded-lg text-white text-sm outline-none ring-0 w-full transition ease-in duration-200 focus:scale-101 md:text-sm" type="text" id="todo-input" placeholder="Add a task">
+        <button type="submit" class="flex justify-center items-center gap-2 p-2.5 bg-accent-purple w-30 rounded-xl text-white text-xs shadow-md shadow-hover-purple/30 hover:bg-hover-purple cursor-pointer transition ease-in duration-200 hover:scale-105 hover:font-semibold md:text-sm md:w-37 hover:"><svg xmlns="http://www.w3.org/2000/svg" class="collapse w-0 h-0 md:w-6 md:h-6 md:visible" viewBox="0 0 24 24"><path fill="currentColor" d="M13 13.5h1v-3h3v-1h-3v-3h-1v3h-3v1h3zM8.116 17q-.691 0-1.153-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.769q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V6.615h1v11.77q0 .23.192.423t.423.192h11.77v1zM7.5 4v12z"/></svg><span>Add task</span></button>
       </form>
       <div class="js-container mt-15">
         <h2 class="text-center mb-10 text-3xl font-semibold text-white tracking-tight md:text-4xl">My todo list <span class="js-counter">()</span></h2>
@@ -23,4 +23,5 @@
     </section>
     <script type="module" src="./src/main.js"></script>
   </body>
+  
 </html>

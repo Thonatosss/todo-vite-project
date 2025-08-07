@@ -1,3 +1,7 @@
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css";
+const notyf = new Notyf();
+
 import { deleteTask, getTasks, editTask } from "./storage";
 let textValue = "";
 function handleDelete(listItem, id) {
@@ -15,7 +19,8 @@ function enterEditMode(listItem) {
   const input = document.createElement("input");
   input.type = "text";
   input.value = textValue;
-  input.className = "js-edit-input p-2 rounded-lg outline-accent-purple bg-gray-500 lg:w-full lg:mt-7 fade-in-edit w-5";
+  input.className =
+    "js-edit-input p-2 rounded-lg bg-item-background border-1 border-gray-500 outline-none ring-0 lg:w-full lg:mt-7 fade-in-edit w-5";
   text.replaceWith(input);
   input.focus();
 
@@ -30,6 +35,15 @@ function saveChanges(listItem, id) {
   listItem.dataset.editing = false;
   toggleButtons(listItem, false);
   const editInput = listItem.querySelector(".js-edit-input");
+
+  if (editInput.value.trim() === "") {
+    listItem.classList.add("fade-out-remove");
+    setTimeout(() => {
+      listItem.remove();
+      deleteTask(id);
+    }, 300);
+    return;
+  }
   const newText = editInput.value.trim();
 
   const newParagraph = document.createElement("p");
